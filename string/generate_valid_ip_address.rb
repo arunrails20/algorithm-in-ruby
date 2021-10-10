@@ -2,7 +2,7 @@
 # form the given string we have generate valid IP address,
 # IP address with three dots, four sections, ex 255.255.255.255
 # each section have 8 bits of max 0-255 numbers
-#  by using 3 need loop to solve the algo.
+# by using 3 need loop to solve the algo.
 def min(a,b)
     a > b ? a : b
 end
@@ -12,7 +12,7 @@ def generate_valid_id(str)
     results_ip_addr = []
     # using 4 to avoid index error 1...4 its gives 1,2,3 index values.
     # in first section and three numbers traverse using above index values
-    # min value finding incase given str length is small less than 4
+    # min value finding, incase given str length is small less than 4
     (1...min(str.length, 4)).each do |i|
         # collect the results for single iteration
         current_results = ["","","",""]
