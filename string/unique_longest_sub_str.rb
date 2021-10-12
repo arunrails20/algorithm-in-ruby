@@ -1,4 +1,6 @@
 # Given an input as an string. find the longest substring without duplicates
+# TC O(n), Space O(n, a), n is length of the string and a is alphabet char
+# present in the given string
 
 def longest_substr(str)
     # key = char and val = index_value of the char
