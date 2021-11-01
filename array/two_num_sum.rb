@@ -5,7 +5,7 @@
 def two_num_sum_solu1(arr, target_sum)
     results = {}
     arr.each do |current_num|
-        # Formula to calculat diff number
+        # Formula to calculate diff number
         diff_num = target_sum - current_num
         if results[current_num]
             return [diff_num, current_num]
