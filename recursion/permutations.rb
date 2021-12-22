@@ -1,25 +1,23 @@
-# # Time O(n^2*n!) | Space O(n*n!)
-# def permutation(array)
-#     curr_permutation, permutations = [], []
-#     permutation_helper(array, curr_permutation, permutations)
-#     return permutations
-# end
+# Time O(n^2*n!) | Space O(n*n!)
+def permutation(array)
+    curr_permutation, permutations = [], []
+    permutation_helper(array, curr_permutation, permutations)
+    return permutations
+end
 
-# def permutation_helper(array, curr_permutation, permutations)
-#     if array.empty?
-#         permutations.append(curr_permutation)
-#     else
-#         for i in 0...array.length
-#             new_array = array[...i] + array[(i+1)...]
-#             new_perms = curr_permutation + [array[i]]
-#             p new_perms
+def permutation_helper(array, curr_permutation, permutations)
+    if array.empty?
+        permutations.append(curr_permutation)
+    else
+        for i in 0...array.length
+            new_array = array[...i] + array[(i+1)...]
+            new_perms = curr_permutation + [array[i]]
+            permutation_helper(new_array, new_perms, permutations)
+        end
+    end
+end
 
-#             permutation_helper(new_array, new_perms, permutations)
-#         end
-#     end
-# end
-
-#p permutation([1,2,3])
+p permutation([1,2,3])
 
 def permutation_soul2(arr)
     permutations = []
