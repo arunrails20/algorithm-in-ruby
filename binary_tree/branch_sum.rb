@@ -1,7 +1,7 @@
 # Prb: sum the branches in the tree
 # Given a Binary Tree, sum the branches in the BT
 # Solution: By using PreOrderTraversal to solve the prb
-
+# Time O(n) | Space O(n)
 # Sample BinaryTree class structure
 class BinaryTree
     attr_accessor :value, :left_child, :right_child
